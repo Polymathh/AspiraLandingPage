@@ -1,0 +1,95 @@
+* {
+    margin: 30px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', serif;
+    font-weight: 300;
+    padding-top: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+    line-height: 1.2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 50px;         
+    position: fixed;
+    top: 0;
+    right:0;
+    left: 0;
+    width: 100%;          
+    z-index: 1000;
+    font-size: 14px;  
+    margin: 0;  
+    box-sizing: border-box; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.logo img{
+    height: 70px;
+    padding-left: 20px;
+}
+
+.enroll-btn {
+    background-color: #C76530;
+    border-radius: 20px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.enroll-btn:hover {
+    background: grey;
+    color: #000;
+}
+
+.hero {
+    display: flex;
+    background-image: url('/static/leads/images/hero.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    min-height: 80vh;
+    flex-wrap: wrap;  
+    justify-content: centre;  
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* black with 60% opacity */
+    z-index: 1;
+  }
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 20px;
+    
+}

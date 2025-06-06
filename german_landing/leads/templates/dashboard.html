@@ -1,0 +1,28 @@
+<h2>Admin Dashboard</h2>
+<table border="1">
+  <tr>
+    <th>First Name</th>
+    <th>Second Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Language Level</th>
+    <th>Date</th>
+    <th>Followed Up</th>
+  </tr>
+  {% for lead in leads %}
+  <tr>
+    <td>{{ lead.first_name }}</td>
+    <td>{{ lead.second_name }}</td>
+    <td>{{ lead.email }}</td>
+    <td>{{ lead.phone }}</td>
+    <td>{{ lead.level_of_language }}</td>
+    <td>{{ lead.created_at }}</td>
+    <td>
+      <form method="post" action="{% url 'mark_followed' lead.id %}">
+        {% csrf_token %}
+        <input type="checkbox" name="followed" {% if lead.is_followed_up %}checked{% endif %} onchange="this.form.submit();">
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>

@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aspira Institute</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Link to your custom CSS -->
+  <link rel="stylesheet" href="{% static 'leads/styles.css' %}"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="{% static 'leads/images/logo.svg' %}" alt="Aspira Logo"/>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#contacts">Contacts</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#hiro" class="enroll-btn">Enroll Now</a>
+    </nav>
+  </header>
+
+  <section id="hiro" class="hero">
+    <div class="hero-text">
+      <h1>Learn German Online.</h1>
+      <p>Join hundreds of learners who’ve transformed their careers, travel, and studies with expert-led, flexible online classes.</p>
+    </div>
+
+    <form class="hero-form" method="post" action="">
+      {% csrf_token %}
+      <label for="first_name">First Name</label>
+      {{ form.first_name }}
+
+      <label for="second_name">Second Name</label>
+      {{ form.second_name }}
+
+      <label for="phone">Phone</label>
+      {{ form.phone }}
+
+      <label for="email">Email</label>
+      {{ form.email }}
+
+      <label for="level_of_language">Language Level</label>
+      {{ form.level_of_language }}
+
+      <button type="submit">Submit</button>
+    </form>      
+  </section>
+
+  <section id="about" class="why-aspira">
+    <h2>Why Aspira?</h2>
+    <p>
+      Aspira Institute makes learning German simple, flexible, and effective.
+      With live classes led by native teachers, a clear beginner-to-advanced
+      curriculum, and small groups for personal attention, you’ll start speaking
+      confidently from day one. Learn at your pace, get real-time feedback, and
+      track your progress all from the comfort of home. Start today and see the
+      difference.
+    </p>
+    <a href="#hiro" class="enroll-btn">Enroll Now</a>
+  </section>
+
+  <section id="faqs" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <p><strong>1. Do I need any prior German knowledge to start?</strong><br/>
+      No. We offer beginner-level (A1) classes designed for those with zero experience.</p>
+    </div>
+    <div class="faq-item">
+      <p><strong>2. How do I book my free trial class?</strong><br/>
+      Simply fill out the form at the top of the page. Choose your level, and you’ll receive a confirmation email with class details.</p>
+    </div>
+    <div class="faq-item">
+      <p><strong>3. Which materials do I need?</strong><br/>
+      All you need is a smartphone, a reliable internet connection, and a headset or headphones with a microphone.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <div class="avatar"></div>
+        <strong>John Wetu</strong>
+        <p>"I’ve tried language apps and self-study before, but nothing compares to Aspira. The lessons are engaging, and having a real teacher makes all the difference."</p>
+      </div>
+      <div class="testimonial">
+        <div class="avatar"></div>
+        <strong>Alicia K.</strong>
+        <p>"Aspira’s classes are the perfect balance of structure and fun. The small group setup helped me speak without fear. Highly recommended!"</p>
+      </div>
+      <div class="testimonial">
+        <div class="avatar"></div>
+        <strong>Sarah W.</strong>
+        <p>"I needed German for my university program. Aspira helped me go from zero to A2 in three months. The live sessions felt like a real classroom!"</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacts">
+    <h2>Contacts</h2>
+    <div class="social-icons">
+      <img src="{% static 'leads/images/phone-call.png' %}" alt="Call"/>
+      <img src="{% static 'leads/images/instagram.png' %}" alt="Instagram"/>
+      <img src="{% static 'leads/images/whatsapp.png' %}" alt="WhatsApp"/>
+      <img src="{% static 'leads/images/gmail.png' %}" alt="Gmail"/>
+      <img src="{% static 'leads/images/tik-tok.png' %}" alt="TikTok"/>
+    </div>
+    <a href="#hiro" class="enroll-btn">Enroll Now</a>
+  </footer>
+
+</body>
+</html>
