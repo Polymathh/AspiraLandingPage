@@ -49,7 +49,7 @@ nav a {
 .enroll-btn {
     background-color: #C76530;
     border-radius: 20px;
-    padding: 10px;
+    padding: 5px;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -58,8 +58,27 @@ nav a {
 
 .enroll-btn:hover {
     background: grey;
-    color: #000;
+    color: #F97316;
 }
+
+section {
+    margin-top: -10px;  
+    margin-bottom: -10px;
+}
+
+.section-divider {
+    width: 100%;
+    height: 2px;
+    margin: 0 auto 1.5rem auto;
+    background: linear-gradient(to right, 
+      #C76530 0%, 
+      #AD5F36 21%, 
+      #88583D 50%, 
+      #4A4A4A 100%);
+    border-radius: 2px;
+  }
+  
+  
 
 .hero {
     display: flex;
@@ -68,10 +87,25 @@ nav a {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
-    min-height: 50vh;
+    height: 90vh;
+    margin-top: -5px;
     flex-wrap: wrap;  
-    justify-content: centre;  
+    justify-content: center;  
+    position: relative;
 }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: 20px;
+    z-index: 0; 
+  }
+  
 
 .hero-text {
     width: 50%;
@@ -79,33 +113,231 @@ nav a {
   }
   
   .hero-text h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 4.5rem;
+    font-weight: 1600;
+    line-height: 1.5;
     margin-bottom: 1rem;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 40px;
+    margin-bottom: -30px;
   }
   
   .hero-text p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.6;
-    width: 90%;
+    width: 80%;
+    color: #fff;
+    padding-left: 40px;
+    padding-top: -40px;
   }
   
   .hero-form {
     background-color: rgba(74, 74, 74, 0.7);
     border-radius: 20px;
-    padding: 10px;
     width: 40%;
     display: flex;
     flex-direction: column;
     z-index: 1;
     margin: 20px;
-    justify-content: center;
+    justify-content:center;
+    height: 85vh;
+    flex: 1;    
+    padding: 30px;
+    align-items: flex-start;
+    margin-right: 70px;
+    margin-left: 10px;    
   }
   
-  .hero-form label {
+  .form-group {
+    margin: 0;
+    padding-top: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .form-group label {
     color: #fff;
     font-size: 0.95rem;
     margin: 0;
-    padding: -60px;
+    display: block;
+    padding-left: 30px;
+    justify-content: space-around;
+    align-items: center;
+    
   }
+  
+  .form-group input,
+  .form-group select {
+    width: 90%;
+    padding: 15px;
+    margin-top: 0px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .form-group button {
+    margin: 0 auto 0 auto;
+    display: block;
+    background-color: #F97316;
+    color: white;
+    padding: 10px;
+    width: 30%;
+    border: none;
+    border-radius: 15px;
+    font-weight: normal;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .form-group button:hover {
+    background-color: #4A4A4A;
+    color: #F97316;
+  }
+   
+
+/* Why Aspira */
+.why-aspira {
+    text-align: center;
+    padding: 4rem 10%;
+}
+
+.why-aspira h2 {
+    font-size: 2.5rem;
+}
+
+.why-aspira p {
+    font-size: 1.2rem;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 4rem 10%;
+    background: #fff;
+}
+  
+  .faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.faq-item {
+text-align: left;
+align-items: flex-start;
+margin: 0;
+
+}
+
+.faq b {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #4A4A4A;
+    margin: 0;
+}
+
+.faq p{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .testimonials h2 {
+    font-size: 2.5rem;
+  }
+  
+  .testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .testimonial {
+    width: 300px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+  
+  .testimonial strong {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .testimonial p {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    align-content: center;
+
+  }
+  
+  .testimonial q {
+    quotes: "“" "”";
+    text-align: justify;
+  }
+
+  footer {
+    text-align: center;
+    margin: 0;
+}
+  
+  footer h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem; 
+    flex-wrap: wrap;
+  }
+  
+  .social-icons img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .enroll-btn {
+    display: inline-block;
+    background-color: #F97316;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .enroll-btn:hover {
+    background-color: #4A4A4A;
+  }
+  
+  
+  
+  

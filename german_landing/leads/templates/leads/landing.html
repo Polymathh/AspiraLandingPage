@@ -34,7 +34,8 @@
 
     <form class="hero-form" method="post" action="">
       {% csrf_token %}
-      <label for="first_name">First Name</label>
+      <div class="form-group">
+        <label for="first_name">First Name</label>
       {{ form.first_name }}
 
       <label for="second_name">Second Name</label>
@@ -49,7 +50,8 @@
       <label for="level_of_language">Language Level</label>
       {{ form.level_of_language }}
 
-      <button type="submit">Submit</button>
+      <button type="submit">Start Learning</button>
+      </div>
     </form>      
   </section>
 
@@ -66,42 +68,59 @@
     <a href="#hiro" class="enroll-btn">Enroll Now</a>
   </section>
 
+  <div class="section-divider"></div>
+
   <section id="faqs" class="faq">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
-      <p><strong>1. Do I need any prior German knowledge to start?</strong><br/>
+      <p><b>1. Do I need any prior German knowledge to start?</b><br/>
       No. We offer beginner-level (A1) classes designed for those with zero experience.</p>
     </div>
     <div class="faq-item">
-      <p><strong>2. How do I book my free trial class?</strong><br/>
+      <p><b>2. How do I book my free trial class?</b><br/>
       Simply fill out the form at the top of the page. Choose your level, and you’ll receive a confirmation email with class details.</p>
     </div>
     <div class="faq-item">
-      <p><strong>3. Which materials do I need?</strong><br/>
+      <p><b>3. Which materials do I need?</b><br/>
       All you need is a smartphone, a reliable internet connection, and a headset or headphones with a microphone.</p>
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <section class="testimonials">
     <h2>Testimonials</h2>
     <div class="testimonial-list">
+      
       <div class="testimonial">
         <div class="avatar"></div>
         <strong>John Wetu</strong>
-        <p>"I’ve tried language apps and self-study before, but nothing compares to Aspira. The lessons are engaging, and having a real teacher makes all the difference."</p>
+        <p>
+          <q>I’ve tried language apps and self-study before, but nothing compares to Aspira. The lessons are engaging, and having a real teacher makes all the difference. After just a few weeks, I can hold simple conversations!</q>
+        </p>
       </div>
+  
       <div class="testimonial">
         <div class="avatar"></div>
         <strong>Alicia K.</strong>
-        <p>"Aspira’s classes are the perfect balance of structure and fun. The small group setup helped me speak without fear. Highly recommended!"</p>
+        <p>
+          <q>Aspira's classes are the perfect balance of structure and fun. The small group setup helped me speak without fear, and the teacher is incredibly patient and encouraging. Highly recommended!</q>
+        </p>
       </div>
+  
       <div class="testimonial">
         <div class="avatar"></div>
         <strong>Sarah W.</strong>
-        <p>"I needed German for my university program. Aspira helped me go from zero to A2 in three months. The live sessions felt like a real classroom!"</p>
+        <p>
+          <q>I needed German for my university program, and Aspira helped me go from zero to A2 in three months. The progress tracking kept me motivated, and the live sessions felt like a real classroom!</q>
+        </p>
       </div>
+  
     </div>
   </section>
+  
+
+  <div class="section-divider"></div>
 
   <footer id="contacts">
     <h2>Contacts</h2>
@@ -114,6 +133,8 @@
     </div>
     <a href="#hiro" class="enroll-btn">Enroll Now</a>
   </footer>
+
+  <div class="section-divider"></div>
 
 </body>
 </html>
